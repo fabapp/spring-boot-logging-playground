@@ -1,0 +1,8 @@
+/.mvn/
+/.settings/
+/target/
+/.classpath
+/.project
+/log.txt
+/mvnw
+/mvnw.cmd

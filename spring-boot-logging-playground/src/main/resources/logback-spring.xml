@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+
+    <appender name="STDOUT" class="ch.qos.logback.core.FileAppender">
+        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder 
+            by default -->
+            <file>/Users/fabiankruger/git/spring-boot-logging-playground/spring-boot-logging-playground/log.txt</file>
+        <encoder>
+            <pattern>%msg %n
+            </pattern>
+        </encoder>
+    </appender>
+
+	<logger name="org" level="warn" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	
+	<logger name="boot.playground" level="debug" additivity="false">
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>
